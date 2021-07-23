@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<h1> Hi ...{{currentuser}} ... welcome to Duniyadari !!!!!!!!!!!!!!!!</h1>
+<table align="center" border="1">
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Postal Code</th>
+                <th>Location</th>
+                <th>Address</th>
+            </tr>
+    </thead>
+    <tbody>
+          {% for i in ud %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.first_name}}</td>
+                <td>{{i.last_name}}</td>
+                <td>{{i.gender}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.mobile}}</td>
+                <td>{{i.postal_code}}</td>
+                <td>{{i.location}}</td>
+                <td>{{i.address}}</td>
+            </tr>
+            {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'ulogout' %}">Logout</a>
+</body>
+</html>

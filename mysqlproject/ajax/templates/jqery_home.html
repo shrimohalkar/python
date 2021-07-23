@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(
+            function()
+            {
+                $("#anc").click(
+                    function()
+                    {
+                       $.get("{% url 'ajaxlogin' %}",function(res){
+                          //alert(res)
+                          $("#jqeryajax").html(res)
+                        })
+
+                       //$.post("{% url 'ajaxlogin' %}",{name:$("#txt1").val(),password:$("#txt2").val()},function(res){
+                       // alert(res)
+                       //})
+                            //$.ajax({
+                            //type:"GET",
+                            //url:"{% url 'ajaxlogin' %}",
+                            //success:function(res){
+                                ////alert(res)
+                              //  $("#jqeryajax").html(res)
+                            //}
+                       //})
+                    //var x={name:$("#txt1").val(),password:$("#txt2").val()}
+                      // $.ajax({
+                        //    type:"POST",
+                          //  url:"{% url 'ajaxlogin' %}",
+                            //data:x,
+                            //success:function(res){
+                              //  //alert(res)
+                                //$("#jqeryajax").html(res)
+                            //}
+                       //})
+                    //}
+
+                )
+            }
+        )
+    </script>
+</head>
+<body>
+    <form action="">
+        {% csrf_token %}
+        <a href="#" id="anc">login</a>
+        <input type="text" id="txt1" placeholder="Username">
+        <input type="text" id="txt2" placeholder="password">
+
+        <div id="jqeryajax">
+
+        </div>
+    </form>
+</body>
+</html>

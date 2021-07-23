@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- MAIN -->
+<div class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <h3 class="page-title">Category</h3>
+            <div class="row">
+                <div class="">
+
+
+                    <!-- INPUTS -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"></h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <div align="center">
+                                <form action="insertrecord" method="post">
+                                    {% csrf_token %}
+                                    <tabel>
+                                        <tr>
+                                            <td>
+                                                Category Name:
+                                            </td>
+                                            <td>
+                                                <input type="text" name="category" class="form-control" placeholder="Category Name" value="" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="submit" class="btn btn-success" >Submit</button>
+                                                <button type="reset" class="btn btn-danger">Cancel</button>
+                                            </td>
+                                        </tr>
+                                    </tabel>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- END INPUTS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

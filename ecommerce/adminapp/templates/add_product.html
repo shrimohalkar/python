@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- MAIN -->
+<div class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <h3 class="page-title">Category</h3>
+            <div class="row">
+                <div class="">
+                    <!-- INPUTS -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"></h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <div >
+                                <form action="insertproduct" method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <table >
+                                        <tr>
+                                            <td>Category: </td>
+                                            <td>
+                                                <select name="cate" id="cdl">
+                                                    <option >Select Category</option>
+                                                    {% for c in cat %}
+                                                    <option value="{{c.id}}">{{c.category_name}}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sub Category: </td>
+                                            <td>
+                                                <select name="subcate" id="sdl">
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product_Name : </td>
+                                            <td>
+                                                <input type="text" name="product_name" class="form-control" placeholder="Product Name" value="" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product_Price: </td>
+                                            <td>
+                                                <input type="text" name="product_price" class="form-control" placeholder="Product Price" value="" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discount: </td>
+                                            <td>
+                                                <input type="text" name="discount" class="form-control" placeholder="Product Price" value="" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discount_Price: </td>
+                                            <td>
+                                                <input type="text" name="discount_price" class="form-control" placeholder="Product Price" value="" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Image: </td>
+                                            <td>
+                                                <input type="file" name="image" class="form-control" placeholder="Product Price" value="" required><br>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Description: </td>
+                                            <td>
+                                                <input type="text" name="descreption" class="form-control" placeholder="Product Price" value="" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="submit" class="btn btn-success">Submit</button>
+                                                <button type="reset" class="btn btn-danger">Cancel</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- END INPUTS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$("#cdl").change(function () {
+//alert('hello')
+
+var categoryId = $(this).val();
+//alert(categoryId)
+
+$.ajax({
+url: 'getsubcategory',
+
+data: {
+'category': categoryId //states from the name attribute
+},
+
+success: function (data) {
+
+$("#sdl").html(data);
+}
+});
+
+});
+
+</script>
+{% endblock content %}

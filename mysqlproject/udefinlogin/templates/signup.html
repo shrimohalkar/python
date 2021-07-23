@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User defined form </title>
+</head>
+<body>
+<form action="udinsertrecord" method="post">
+{% csrf_token %}
+    <table align="center">
+        <h1 style="color:red " align="center">Registration form </h1>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" name="ufname"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="ulname"></td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="uusername"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="uemail"></td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td><input type="number" name="umobile" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" name="upassword"></td>
+        </tr>
+        <tr>
+            <td> Confirm password</td>
+            <td><input type="password" name="ucpassword"></td>
+        </tr>
+        <tr>
+            <td>Postal Code</td>
+            <td><input type="number" name="upostalcode" pattern="[0-9]{6}" maxlength="6"></td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td><input type="text" name="ulocation"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" name="uaddress"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>
+<a href="{% url 'udlogin' %}" style="text-decoration: none"><span>Already user </span>Login</a>
+</body>
+</html>

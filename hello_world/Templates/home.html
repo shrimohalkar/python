@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body bgcolor="pink">
+<h1>Welcome to {{name}}</h1>
+<h1>Hello... we are on Home page</h1>
+<h2> Lets Do Simple calculation...</h2>
+<form action="expresion" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+        <th><label for="">Enter first number</label></th>
+        <td><input type="text" name="1st" required><br></td>
+        </tr>
+        <tr>
+        <th><label for="">Enter Second number</label></th>
+        <td><input type="text" name="2nd" required></td>
+        </tr>
+        <tr>
+            <th><td><input type="submit" value="Addition"></td></th>
+        </tr>
+    </table>
+</form>
+
+{% if user.is_authenticated %}
+
+<a href="{{link}}">Profile</a>&nbsp
+<a href="{{link1}}">About</a>&nbsp
+<a href="app4/logout">Logout</a>
+
+{% else %}
+
+<a href="app2/signup">SignUp</a>&nbsp
+<a href="app3/login">Login</a>
+
+{% endif %}
+
+</body>
+</html>

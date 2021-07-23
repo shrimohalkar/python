@@ -1,0 +1,58 @@
+{% extends 'base.html '%}
+
+{% block content %}
+<div class="main">
+    <!-- MAIN CONTENT -->
+<div class="main-content">
+    <div class="container-fluid">
+        <!-- OVERVIEW -->
+        <div class="panel panel-headline">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sub Category</h3>
+                <div class="row">
+                    <div class="">
+                        <!-- TABLE STRIPED -->
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"></h3>
+                                <a href="{% url 'addsubcategory' %}" class="btn btn-success float right "> Add SubCategory </a>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Category </th>
+                                            <th>SubCategory </th>
+                                            <th>Action</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for i in cat %}
+                                        <tr>
+                                            <td>{{i.id}}</td>
+                                            <td>{{i.category_name}}</td>
+                                            <td>{{i.subcategory_name}}</td>
+
+                                            <td>
+                                                <a href="{% url 'deletesubcategory' i.id %}">Delete</a>
+                                                <a href="{% url 'editsubcat'  i.id %}">Edit</a>
+                                            </td>
+                                            <td>
+                                                <a href="/substatus/{{i.id}}/{{i.status}}">{{i.status}}</a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

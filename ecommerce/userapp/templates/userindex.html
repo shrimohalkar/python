@@ -1,0 +1,524 @@
+{% extends 'userbase.html '%}
+{% load static %}
+{% block content %}
+    <!-- //carousel -->
+    <div class="carousel slide" data-ride="carousel" id="myslider">
+        <ul class="carousel-indicators">
+            <li data-slide-to="0" data-target="#myslider" class="active"></li>
+            <li data-slide-to="1" data-target="#myslider"></li>
+            <li data-slide-to="2" data-target="#myslider"></li>
+            <li data-slide-to="3" data-target="#myslider"></li>
+            <li data-slide-to="4" data-target="#myslider"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/banner1.jpg' %}" width="100%" height="300px" class="img-fluid">
+                <div class="carousel-caption">
+                    <h2>The Biggest <span>Sale</span></h2>
+                    <p>Special offer for today</p>
+                    <a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/banner2.jpg' %}" width="100%" height="300px" class="img-fluid">
+                <div class="carousel-caption">
+                    <h2>Summer <span>Collection</span></h2>
+                    <p>New Arrival's On Sale</p>
+                    <a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/banner3.jpg' %}" width="100%" height="300px" class="img-fluid">
+                <div class="carousel-caption">
+                    <h2>The Biggest <span>Sale</span></h2>
+                    <p>Special offer for today</p>
+                    <a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/banner4.jpg' %}" width="100%" height="300px" class="img-fluid">
+                <div class="carousel-caption">
+                    <h2>Summer <span>Collection</span></h2>
+                    <p>New Arrival's On Sale</p>
+                    <a class="hvr-outline-out button2" href="#">Shop Now </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/banner5.jpg' %}" width="100%" height="250px" class="img-fluid">
+                <div class="carousel-caption">
+                    <h2>The Biggest <span>Sale</span></h2>
+                    <p>Special offer for today</p>
+                    <a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" data-slide="prev" href="#myslider"><span class="carousel-control-prev-icon"></span></a>
+            <a href="#myslider" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+        </div>
+    </div>
+    <!-- //carosuel -->
+
+    <!-- banner -->
+    <div class="banner_bottom pt-4">
+        <div class="container-fluid">
+            <div class="row pt-4">
+                <div class="col-md-6 col-sm-6 banner_bottom_gird_1">
+                    <h3><span>F</span>all Ahead</h3>
+                    <p>New Arrivals</p>
+                </div>
+                <div class="col-md-6 col-sm-6 banner_bottom_gird_2">
+                    <h3><span>F</span>all Ahead</h3>
+                    <p>New Arrivals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+    <!-- schedule-bottom -->
+    <div class="container-fluid pt-5">
+        <div class="row our_team_bottom_img">
+            <div class="col-lg-6 " style="margin: 0; padding: 0">
+                <img src="{% static 'images/ab_pic.jpg' %}" alt="" width="100%" class="img-fluid">
+            </div>
+            <div class="col-lg-6 our_team_bottom_text">
+                <div class="container">
+                    <div class="row container_text">
+                        <h3>SAVE UP TO 50% IN THIS WEEK</h3>
+                        <p>Suspendisse varius turpis efficitur erat laoreet dapibus. Mauris</p>
+                        <p>sollicitudin scelerisque commodo.Nunc dapibus mauris sed metus finibus posuere.</p>
+                        <div class="col-lg-4 our_team_bottom_text1 text-center">
+                            <i class="fas fa-users"></i>
+                            <h4>Customers</h4>
+                            <h5 class="counter">653</h5>
+                        </div>
+                        <div class="col-lg-4 our_team_bottom_text1 text-center">
+                            <i class="far fa-calendar-alt"></i>
+                            <h4>Events</h4>
+                            <h5 class="counter">143</h5>
+                        </div>
+                        <div class="col-lg-4 our_team_bottom_text1 text-center">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Awards</h4>
+                            <h5 class="counter">53</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //schedule-bottom -->
+    <!-- banner-bootom -->
+    <div class="container">
+       <h3 class="text-center py-5"><span style="font-weight: 700">WHAT'S</span> TRENDING</h3>
+        <div class="row">
+            <div class="col-md-5">
+                <!--              womens.html-->
+                <a href="#">
+                    <div class="bb-left">
+                        <h3><span>S</span>ale </h3>
+                        <p>Upto 55%</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-7">
+                <!--              mens.html-->
+                <div>
+                    <a href="#">
+                        <div class=" col-md-12 bb-right_top ">
+                            <h3><span>S</span>ale </h3>
+                            <p>Upto 45%</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class=" col-md-12 bb-right_bottom">
+                            <h3><span>S</span>ale </h3>
+                            <p>Upto 75%</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner-bootom -->
+    <!--/grids-->
+    <div class="container-fluid pt-4">
+        <div class="row">
+            <div class="col-md-6 gird_left">
+                <a href="#"><h4>Flat <span>60%</span> offer</h4></a>
+            </div>
+            <div class="col-md-6 gird_right">
+                <a href="#"><h4>Flat <span>50%</span> offer</h4></a>
+            </div>
+        </div>
+    </div>
+    <!--/grids-->
+    <!-- /new_arrivals -->
+        <div class="container pt-5">
+           <h3 class="text-center"><span style="font-weight: 700">NEW </span> ARRIVALS</h3>
+            <div class="row">
+                <div id="horizontalTab">
+                    <ul class="resp-tabs-list">
+                        <li class="resp-tab-item resp-tab-active"> Men's</li>
+                        <li class="resp-tab-item "> Women's</li>
+                        <li class="resp-tab-item "> Bags</li>
+                        <li class="resp-tab-item "> Footwear</li>
+                    </ul>
+                    <div class="resp-tabs-container">
+                        <!--     tab1           -->
+                        <div class="tab1">
+
+                            <div class="col-lg-3 col-md-4 col-xs-6 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src="{% static 'images/m1.jpg' %}" alt="" class="img-fluid">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="#" class="link-product-add-cart">Quick View</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">New</span>
+                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="#">Formal Blue Shirt</a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price">$45.99</span>
+                                            <del>$69.71</del>
+                                        </div>
+                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                            <form action="#" method="post">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="Formal Blue Shirt" />
+                                                    <input type="hidden" name="amount" value="30.99" />
+                                                    <input type="hidden" name="discount_amount" value="1.00" />
+                                                    <input type="hidden" name="currency_code" value="USD" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src="{% static 'images/m2' %}.jpg" alt="">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="#" class="link-product-add-cart">Quick View</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">New</span>
+                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="#">Gabi Full Sleeve Sweatshirt</a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price">$55.99</span>
+                                            <del>$90.71</del>
+                                        </div>
+                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                            <form action="#" method="post">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="Formal Blue Shirt" />
+                                                    <input type="hidden" name="amount" value="30.99" />
+                                                    <input type="hidden" name="discount_amount" value="1.00" />
+                                                    <input type="hidden" name="currency_code" value="USD" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src="{% static 'images/m3.jpg' %}" alt="" class="img-fluid">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="#" class="link-product-add-cart">Quick View</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">New</span>
+                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="#">Dark Blue Track Pants</a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price">$65.99</span>
+                                            <del>$89.71</del>
+                                        </div>
+                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                            <form action="#" method="post">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="Formal Blue Shirt" />
+                                                    <input type="hidden" name="amount" value="30.99" />
+                                                    <input type="hidden" name="discount_amount" value="1.00" />
+                                                    <input type="hidden" name="currency_code" value="USD" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src="{% static 'images/m4.jpg' %}" alt="" class="img-fluid">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="#" class="link-product-add-cart">Quick View</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">New</span>
+                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="#">Round Neck Black T-Shirt</a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price">$85.99</span>
+                                            <del>$120.11</del>
+                                        </div>
+                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                            <form action="#" method="post">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="Formal Blue Shirt" />
+                                                    <input type="hidden" name="amount" value="30.99" />
+                                                    <input type="hidden" name="discount_amount" value="1.00" />
+                                                    <input type="hidden" name="currency_code" value="USD" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src="{% static 'images/m5.jpg' %}" alt="" class="img-fluid">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="#" class="link-product-add-cart">Quick View</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">New</span>
+                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="#">Men's Black Jeans</a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price">$105.99</span>
+                                            <del>$169.10</del>
+                                        </div>
+                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                            <form action="#" method="post">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="Formal Blue Shirt" />
+                                                    <input type="hidden" name="amount" value="30.99" />
+                                                    <input type="hidden" name="discount_amount" value="1.00" />
+                                                    <input type="hidden" name="currency_code" value="USD" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src="{% static 'images/m6.jpg' %}" alt="" class="img-fluid">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="#" class="link-product-add-cart">Quick View</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">New</span>
+                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="#">Reversible Belt</a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price">$75.99</span>
+                                            <del>$90.34</del>
+                                        </div>
+                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                            <form action="#" method="post">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="Formal Blue Shirt" />
+                                                    <input type="hidden" name="amount" value="30.99" />
+                                                    <input type="hidden" name="discount_amount" value="1.00" />
+                                                    <input type="hidden" name="currency_code" value="USD" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src="{% static 'images/m7.jpg' %}" alt="" class="img-fluid">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="#" class="link-product-add-cart">Quick View</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">New</span>
+                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="#">Analog Watch</a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price">$60.99</span>
+                                            <del>$80.30</del>
+                                        </div>
+                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                            <form action="#" method="post">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="Formal Blue Shirt" />
+                                                    <input type="hidden" name="amount" value="30.99" />
+                                                    <input type="hidden" name="discount_amount" value="1.00" />
+                                                    <input type="hidden" name="currency_code" value="USD" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src="{% static 'images/m8.jpg' %}" alt="" class="img-fluid">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="#" class="link-product-add-cart">Quick View</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">New</span>
+                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="#">Party Men's Blazer</a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price">$120.80</span>
+                                            <del>$130.60</del>
+                                        </div>
+                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                            <form action="#" method="post">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="Formal Blue Shirt" />
+                                                    <input type="hidden" name="amount" value="30.99" />
+                                                    <input type="hidden" name="discount_amount" value="1.00" />
+                                                    <input type="hidden" name="currency_code" value="USD" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--	 //tab1               -->
+                    <!--      tab2      -->
+                    <!--       //tab2     -->
+                    <!--      tab3      -->
+                    <!--       //tab3     -->
+                    <!--      tab4     -->
+                    <!--       //tab4    -->
+                </div>
+            </div>
+        </div>
+    <!-- //New Arrivals  -->
+    <!--grids-->
+    <div class="gird pt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 bg-secondary">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 px-3 py-5 bg-primary text-center">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <h5>FREE SHIPPING</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 bg-secondary">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 px-3 py-5 bg-primary text-center">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <h5>24/7 SUPPORT</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 bg-secondary">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 px-3 py-5 bg-primary text-center">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <h5>MONEY BACK GUARANTEE</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 bg-secondary">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 px-3 py-5 bg-primary text-center">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <h5>FREE GIFT COUPONS</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//grids-->
+{% endblock content %}

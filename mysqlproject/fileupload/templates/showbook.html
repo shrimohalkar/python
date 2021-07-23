@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Book</title>
+</head>
+<body>
+<form action="">
+    <table border="1" align="center">
+        <tr>
+            <td>Title</td>
+            <td>Author</td>
+            <td>PDF</td>
+            <td>Cover</td>
+        </tr>
+        {% for i in book %}
+        <tr>
+            <td>{{i.title}}</td>
+            <td>{{i.author}}</td>
+            <td><a href="{{i.pdf.url}}" target="_blank">Download</a></td>
+            <td><img src="{{i.cover.url}}"  height="100px" width="100px"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+</body>
+</html>

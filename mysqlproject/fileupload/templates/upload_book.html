@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload book</title>
+</head>
+<body>
+<h1 align="center">Upload Book</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>Book title</td>
+            <td><input type="text" name="booktitle"></td>
+        </tr>
+        <tr>
+            <td>Book author</td>
+            <td><input type="text" name="bookauthor"></td>
+        </tr>
+        <tr>
+            <td>Book PDF</td>
+            <td><input type="file" name="bookpdf"></td>
+        </tr>
+        <tr>
+            <td>Book cover</td>
+            <td><input type="file" name="bookcover"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

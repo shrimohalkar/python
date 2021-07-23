@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>I am on HTML homepage {{sname}}</h1>
+
+    <a href="{% url 'aboutpage' %}">about</a>
+
+{% if 3 > 2  %}
+
+ <h2>condition is true</h2>
+
+{% endif %}
+
+{% if m1 > m2 and m1 > m3 %}
+<h2>m1 is largest number {{m1}}</h2>
+{% elif m2 > m1 and m2 > m3%}
+<h2>m2 is largest number {{m2}}</h2>
+{% else %}
+<h2>m3 is largest number {{m3}}</h2>
+{% endif %}
+
+{% for i in sname %}
+{{i}}
+{% endfor %}
+    <br><br>
+{% for i in mylist %}
+{{i}}
+{% endfor %}
+
+</body>
+</html>

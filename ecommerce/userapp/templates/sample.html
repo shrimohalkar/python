@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <!-- OVERVIEW -->
+            <div class="panel panel-headline">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add SubCategories</h3>
+                    <div class="row">
+                        <div class="col-md-6" align="center">
+                            <!-- INPUTS -->
+                            <div class="panel">
+                                <!--                                    <div class="panel-heading">-->
+
+                                <!--                                    </div>-->
+                                <div class="panel-body">
+                                    <form action="insertcategorie" method="post">
+                                        {% csrf_token %}
+                                        <table align="center">
+                                            <tr>
+                                                <td>Category Name : </td>
+                                                <td>
+                                                    <select name="cnt">
+                                                        <option>Select Country</option>
+                                                        {% for c in country %}
+                                                        <option value="{{c.id}}">{{c.country_name}}</option>
+                                                        {% endfor %}
+                                                    </select><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>SubCategory Name : </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="SubCategory Name" name="categorie" required><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="btn  btn-success"><button type="submit" >Submit</button> </a>
+                                                    <a href="{% url 'categories' %}" class="btn  btn-danger"><button type="button">Cancel</button></a>
+                                                    <a class="btn  btn-success"><button type="reset">Reset</button></a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- End_INPUTS -->
+                        </div>
+                    </div>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

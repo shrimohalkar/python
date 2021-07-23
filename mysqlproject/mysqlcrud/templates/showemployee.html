@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Employee</title>
+</head>
+<body>
+ <table align="center" border="1">
+     <thead>
+        <th>EMP_id</th>
+        <th>EMP_Name</th>
+        <th>Gender</th>
+        <th>Hobbies</th>
+        <th>Country</th>
+        <th>Action</th>
+
+     </thead>
+     <tbody>
+     {% for i in emp %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.hobbies}}</td>
+            <td>{{i.country_name}}</td>
+            <td>
+                <a href="{% url 'delete' i.id %}">Delete</a>
+                <a href="{% url 'edit' i.id %}">Edit</a>
+            </td>
+            
+            <td>
+                <a href="/status/{{i.id}}/{{i.status}}">{{i.status}}</a>
+            </td>
+        </tr>
+     {% endfor %}
+     <tr>
+         <td colspan="6" align="center">
+             <a href="{% url 'insertrecord' %}" >Home</a>
+         </td>
+     </tr>
+     </tbody>
+ </table>
+
+</body>
+</html>

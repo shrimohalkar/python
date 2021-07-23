@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee:</title>
+</head>
+<body>
+
+<form action="/update/{{emp.id}}" method="POST">
+    {% csrf_token %}
+    <table align="center">
+            <tr>
+                <td>Employee Name</td>
+                <td>
+                    <input type="text" name="ename" value="{{emp.name}}">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                 <td>
+                     {% if emp.gender == 'male'%}
+                        Male: <input type="radio" value="male" name="gender" checked>
+                        Female: <input type="radio" value="female" name="gender">
+                     {% elif emp.gender == 'female' %}
+                        Male: <input type="radio" value="male" name="gender" >
+                        Female: <input type="radio" value="female" name="gender" checked>
+                     {% else %}
+                        Male: <input type="radio" value="male" name="gender" >
+                        Female: <input type="radio" value="female" name="gender" >
+                     {% endif %}
+                 </td>
+             </tr>
+
+            <tr>
+                <td>Hobbies :</td>
+                 <td>
+                {% if 'Cricket' in emp.hobbies %}
+                    <input type="checkbox" value="Cricket" name="hobbies[]" checked>Cricket
+                {% else %}
+                    <input type="checkbox" value="Cricket" name="hobbies[]">Cricket
+                {% endif %}
+
+                {% if 'Swimming' in emp.hobbies %}
+                <input type="checkbox" value="Swimming" name="hobbies[]" checked>Swimming
+                {% else %}
+                <input type="checkbox" value="Swimming" name="hobbies[]">Swimming
+                {% endif %}
+
+                {% if 'Hocky' in emp.hobbies %}
+                <input type="checkbox" value="Hocky" name="hobbies[]" checked>Hocky
+                {% else %}
+                <input type="checkbox" value="Hocky" name="hobbies[]">Hocky
+                {% endif %}
+
+                </td>
+            </tr>
+
+             <tr>
+                <td>Country :</td>
+                <td>
+                    <select name="cnt" >
+                        <option>Select Country</option>
+                        {% for c in cntry %}
+                            {% if c.id == emp.country %}
+                                <option value="{{c.id}}" selected>{{c.country_name}}</option>
+                            {% else %}
+                                <option value="{{c.id}}">{{c.country_name}}</option>
+                            {% endif%}
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center" >
+                    <button type="submit">Update</button>
+                </td>
+            </tr>
+    </table>
+</form>
+
+</body>
+</html>

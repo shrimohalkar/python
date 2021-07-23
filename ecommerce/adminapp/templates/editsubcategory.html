@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- MAIN -->
+<div class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <h3 class="page-title">Category</h3>
+            <div class="row">
+                <div class="">
+                    <!-- INPUTS -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"></h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <div >
+                                <form action="/updatesubcategory/{{subcat.id}}" method="post">
+                                    {% csrf_token %}
+                                    <table >
+                                        <tr>
+                                            <td>Category Name: </td>
+                                            <td>
+                                                <select name="cate" id="">
+                                                    <option >Select Category</option>
+                                                     {% for c in cat %}
+                                                        {% if c.id == subcat.category %}
+                                                            <option value="{{c.id}}" selected>{{c.category_name}}</option>
+                                                        {% else %}
+                                                            <option value="{{c.id}}">{{c.category_name}}</option>
+                                                        {% endif%}
+                                                    {% endfor %}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sub Category name: </td>
+                                            <td>
+                                                <input type="text" name="subcategory" class="form-control" placeholder="Sub Category Name" value="{{subcat.subcategory_name}}" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="submit" class="btn btn-success">Update</button>
+                                                <button type="reset" class="btn btn-danger">Cancel</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- END INPUTS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script >
+        function loginpage()
+        {
+           // alert("login")
+            var x
+            if(window.XMLHttpRequest)
+            {
+                x= new XMLHttpRequest();
+                alert("latest browser")
+            }
+            else
+            {
+                x= new ActiveXObject("Microsoft.XMLHTTP");
+                alert("Please update your browser")
+            }
+            x.open("GET",'ajaxlogin',true)
+            x.send()
+            x.onreadystatechange=function()
+            {
+                if(x.readyState==4)
+                {
+                    document.getElementById("logincontainer").innerHTML=x.responseText
+                }
+            }
+        }
+
+        function registerpage()
+        {
+           // alert("register")
+            var x
+            if(window.XMLHttpRequest)
+            {
+                x= new XMLHttpRequest();
+                alert("latest browser")
+            }
+            else
+            {
+                x= new ActiveXObject("Microsoft.XMLHTTP");
+                alert("Please update your browser")
+            }
+            x.open("GET","ajaxregister",true)
+            x.send()
+            x.onreadystatechange=function()
+            {
+                if(x.readyState==4)
+                {
+                    document.getElementById("logincontainer").innerHTML=x.responseText
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Welcome to Pune</h1>
+<a href="#" onclick="loginpage()">Login</a>&nbsp &nbsp
+<a href="#" onclick="registerpage()">Register</a>
+
+<div id="logincontainer">
+
+</div>
+</body>
+</html>

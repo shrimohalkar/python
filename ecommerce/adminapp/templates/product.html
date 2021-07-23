@@ -1,0 +1,71 @@
+{% extends 'base.html '%}
+
+{% block content %}
+<div class="main">
+    <!-- MAIN CONTENT -->
+<div class="main-content">
+    <div class="container-fluid">
+        <!-- OVERVIEW -->
+        <div class="panel panel-headline">
+            <div class="panel-heading">
+                <h3 class="panel-title">Product</h3>
+                <div class="row">
+                    <div class="">
+                        <!-- TABLE STRIPED -->
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"></h3>
+                                <a href="{% url 'addproduct' %}" class="btn btn-success float right "> Add product </a>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Category </th>
+                                            <th>SubCategory </th>
+                                            <th>Product_Name </th>
+                                            <th>Product_Price </th>
+                                            <th>Discount </th>
+                                            <th>Discount_Price </th>
+                                            <th>Image </th>
+                                            <th>Description </th>
+                                            <th>Action</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for i in prod %}
+                                        <tr>
+                                            <td>{{i.id}}</td>
+                                            <td>{{i.category_name}}</td>
+                                            <td>{{i.subcategory_name}}</td>
+                                            <td>{{i.product_name}}</td>
+                                            <td>{{i.product_price}}</td>
+                                            <td>{{i.Discount}}</td>
+                                            <td>{{i.Discount_price}}</td>
+                                            {% if i.image %}
+                                            <td><img src="media/{{i.image}}" alt="" width="100px" height="100px"></td>
+                                            {% endif %}
+                                            <td>{{i.Descreption}}</td>
+                                            <td>
+                                                <a href="{% url 'deleteproduct' i.id %}">Delete</a>
+                                                <a href="{% url 'editproduct' i.id %}">Edit</a>
+                                            </td>
+                                            <td>
+                                                <a href="/productstatus/{{i.id}}/{{i.status}}">{{i.status}}</a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>employee detail</title>
+</head>
+<body align="center">
+
+<h1>Employee Details</h1>
+
+<table align="center" border="1">
+    <thead>
+        <tr>
+           <th>emp id</th>
+           <th>Name</th>
+           <th>Salary</th>
+           <th>Location</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for emp in empdetails %}
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.Emp_name}}</td>
+            <td>{{emp.Salary}}</td>
+            <td>{{emp.Location}}</td>
+            <td><a href="{% url 'updateemp' emp.id %}">Edit</a>
+                <a href="{% url 'deleteemp' emp.id %}">Delete</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+
+    </tbody>
+
+</table>
+
+<a href="{% url 'emphome' %}">Go Back HomePage </a>
+
+</body>
+</html>

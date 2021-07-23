@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- MAIN -->
+<div class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <h3 class="page-title">Product</h3>
+            <div class="row">
+                <div class="">
+                    <!-- INPUTS -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div >
+                                <form action="/updateproduct/{{prod.id}}" method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    {% csrf_token %}
+                                    <table >
+                                        <tr>
+                                            <td>Category Name: </td>
+                                            <td>
+                                                <select name="cate" >
+                                                    <option >Select Category</option>
+                                                     {% for c in cat %}
+                                                        {% if c.id == prod.category_ID %}
+                                                            <option value="{{c.id}}" selected>{{c.category_name}}</option>
+                                                        {% else %}
+                                                            <option value="{{c.id}}">{{c.category_name}}</option>
+                                                        {% endif%}
+                                                    {% endfor %}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>SubCategory Name: </td>
+                                            <td>
+                                                <select name="subcate" id="">
+                                                    <option >Select SubCategory</option>
+                                                     {% for sub in subcat %}
+                                                        {% if sub.id == prod.Subcategory_ID %}
+                                                            <option value="{{sub.id}}" selected>{{sub.subcategory_name}}</option>
+                                                        {% else %}
+                                                            <option value="{{sub.id}}">{{sub.subcategory_name}}</option>
+                                                        {% endif%}
+                                                    {% endfor %}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product_Name : </td>
+                                            <td>
+                                                <input type="text" name="product_name" class="form-control" placeholder="Product Name" value="{{prod.product_name}}" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product_Price: </td>
+                                            <td>
+                                                <input type="text" name="product_price" class="form-control" placeholder="Product Price" value="{{prod.product_price}}" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discount: </td>
+                                            <td>
+                                                <input type="text" name="discount" class="form-control" placeholder="Product Price" value="{{prod.Discount}}" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discount_Price: </td>
+                                            <td>
+                                                <input type="text" name="discount_price" class="form-control" placeholder="Product Price" value="{{prod.Discount_price}}" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Image: </td>
+                                            <td>
+                                                <input type="file" name="image" class="form-control" placeholder="Product Price" required><br>
+                                                {% if prod.image %}
+                                                    <img src="{{prod.image.url}}" alt="" height="250px" width="300">
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Description: </td>
+                                            <td>
+                                                <input type="text" name="descreption" class="form-control" placeholder="Product Price" value="{{prod.Descreption}}" required><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="submit" class="btn btn-success">Update</button>
+                                                <button type="reset" class="btn btn-danger">Cancel</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- END INPUTS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
